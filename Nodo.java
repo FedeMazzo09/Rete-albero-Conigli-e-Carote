@@ -17,4 +17,8 @@ public class Nodo {
         this.genitore = genitore;
         this.simbolo = simbolo;
     }
+
+    public String toString() {
+        return "Nodo [riga=" + riga + ", numero=" + numero + ", genitore=" + genitore + ", simbolo=" + simbolo + "]";
+    }
 }

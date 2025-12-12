@@ -1,14 +1,24 @@
 public class ReteAlbero {
-    private Nodo mappa[];
+    Nodo[] mappa;
 
     public ReteAlbero(int dimensione) {
         mappa = new Nodo[dimensione];
     }
 
-    public void inserisci(int indice, Nodo.Simbolo simbolo) {
-        if (indice >= 0 && indice < mappa.length) {
-            mappa[indice] = new Nodo(0, 0, null, simbolo);
+    public void aggiungiNodo(Nodo nodo) {
+        for (int i = 0; i < mappa.length; i++) {
+            if (mappa[i] == null) {
+                mappa[i] = nodo;
+                return;
+            }
         }
     }
 
+    public void stampaMappa() {
+        for (Nodo nodo : mappa) {
+            if (nodo != null) {
+                System.out.println(nodo);
+            }
+        }
+    }
 }
